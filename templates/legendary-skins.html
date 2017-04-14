@@ -37,7 +37,7 @@
       <audio audiopls ng-src="{{audio.url}}" autoplay="true"></audio>
     </div>
   </div>
-  <div class="inner" ng-class="{ hide: preview }">
+  <div class="inner">
     <h2>Legendary Skins <small class="color-legendary">3000</small></h2>
     <div class="images">
       <div class="card" ng-repeat="skin in ::data.items.skinsLegendary track by $index" lazy-background="{{::skin.url}}">

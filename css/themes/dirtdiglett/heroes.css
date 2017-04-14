@@ -22,7 +22,7 @@
   background: url(resources/bg.png) no-repeat top;
   background-size: cover;
   background-color: #293347;
-  filter: none;
+  filter: brightness(1);
 }
 
 #cost-remaining {
