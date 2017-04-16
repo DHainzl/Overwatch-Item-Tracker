@@ -3,11 +3,11 @@
   <title>Thingy</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../../css/vendor.min.css">
-  <link rel="stylesheet" href="./Sound-Viewer/main.css">
+  <link rel="stylesheet" href="./main.css">
   <script src="../../js/vendor/angular.min.js"></script>
   <script src="../../js/vendor/ui-bootstrap.min.js"></script>
-  <script src="./Sound-Viewer/download.min.js"></script>
-  <script src="./Sound-Viewer/app.js"></script>
+  <script src="./download.min.js"></script>
+  <script src="./app.js"></script>
 </head>
 <body ng-controller="MainCtrl as $ctrl" ng-keydown="$ctrl.handleKeyPress($event)">
   <div id="heroes">
@@ -44,7 +44,7 @@
       </div>
     </div>
     <div id="soundList">
-      <div class="sound btn btn-default" ng-repeat="sound in $ctrl.getSoundFiles() track by $index" ng-click="$ctrl.playSound(sound.id, $index)" ng-class="{selected: $ctrl.sSound == sound.id}">{{sound.id}} {{$ctrl.mappedSounds[$ctrl.hero][sound.id] ? '★' : ''}}<span>{{$ctrl.getItemName(sound.id)}}</span></div>
+      <div class="sound btn btn-default" ng-repeat="sound in $ctrl.getSoundFiles() track by $index" ng-click="$ctrl.playSound(sound.id, $index)" ng-class="{selected: $ctrl.sSound == sound.id, new: sound.ts}">{{sound.id}} {{$ctrl.mappedSounds[$ctrl.hero][sound.id] ? '★' : ''}}<span>{{$ctrl.getItemName(sound.id)}}</span></div>
     </div>
   </div>
 </body>
